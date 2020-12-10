@@ -7,7 +7,6 @@ const ingredients = [
   'Приправы',
 ];
 
-//console.log(ingredients);
 const createIngredientMarkup = ingredient => {
     const ingredientItem = document.createElement('li');
     ingredientItem.textContent = ingredient;
@@ -15,13 +14,10 @@ const createIngredientMarkup = ingredient => {
 
     return ingredientItem;
 };
- //createIngredientMarkup(ingredients);
-
 const createIngredientsItems = ingredients.map(ingredient =>
 createIngredientMarkup(ingredient));
 console.log(createIngredientsItems);
 
 const ingredientsListRef = document.querySelector('#ingredients');
-//console.log(ingredientsListRef);
 
 ingredientsListRef.append(...createIngredientsItems);
